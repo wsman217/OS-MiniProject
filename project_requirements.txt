@@ -1,0 +1,51 @@
+Team Member 1 Tasks (FCFS Algorithm on schedule_arrive_zero.txt)
+Q1. Demonstrate FCFS execution:
+Update the code to implement the FCFS algorithm for task scheduling.
+Compile the program using the provided makefile (make fcfs).
+Run the program with schedule_arrive_zero.txt input file.
+Verify the execution order matches the FCFS criteria.
+Q2. Print Process Metrics:
+Modify code to calculate and print turnaround time, waiting time, response time, and response ratio for each process. (Click here: Formula Sheet)
+Format output in a well-organized table format.
+Q3. Print Avaerage Metrics:
+Extend code to calculate and print average turnaround time, average waiting time, and throughput.
+
+Ensure output is presented clearly in a tabular format.
+
+Team Member 2 Tasks (FCFS Algorithm on schedule_arrive_diff.txt)
+Q4. Implement FCFS for Different Arrival Times:
+Duplicate and modify the code for FCFS scheduling to handle the tasks with different arrival times.
+Create a new file scheduler_fcfs_diff_arrival.c if necessary, and update the makefile accordingly.
+Compile and run the program with schedule_arrive_diff.txt input file.
+Verify if any adjustments are needed for correct task scheduling.
+Do the same as Q2 and Q3.
+
+Team Member 3 Tasks (SJF Algorithm on schedule_arrive_zero.txt)
+Q5. Implement SJF Execution:
+Update the code to implement the Shortest Job First (SJF) algorithm for task scheduling.
+Compile the program using the provided makefile (make sjf).
+Run the program with schedule_arrive_zero.txt input file.
+Confirm the execution order adheres to the SJF criteria.
+Q6. Print Process Metrics for SJF:
+Modify code to calculate and print turnaround time, waiting time, response time, and response ratio for each process under SJF scheduling.
+Organize output in table format as required.
+Q7. Print Avaerage Metrics for SJF:
+Extend code to calculate and print average turnaround time, average waiting time, and throughput under SJF scheduling.
+Format output in a clear tabular layout for better readability.
+
+Overall Guidelines:
+Collaborate closely within the teams to ensure consistency in coding standards and results.
+Test each modification thoroughly to validate the correctness and accuracy of outputs.
+Document code changes clearly, including algorithm implementations and metric calculations.
+Present final outputs in a well-organized table format as specified in the requirements.
+By dividing the tasks among team members and collaborating effectively, the group can successfully implement and demonstrate the required functionalities while maintaining code integrity and clarity of output presentation.
+
+
+
+Phase 1 due and requirement:
+Team Member 1 Tasks (FCFS Algorithm on schedule_arrive_zero.txt)
+Team Member 2 Tasks (FCFS Algorithm on schedule_arrive_diff.txt)
+Due April 19th - Before due, if you need any inputs, please book an appointment early with me during office hours. The team needs to meet in person by booking one of the office hours to demonstrate this on your computer. One can book the appointment in a team; all team members should be present during the demonstration. Input will be provided for the next phase of implementation.
+Phase 2 due and requirement:
+Team Member 3 Tasks (SJF Algorithm on schedule_arrive_zero.txt)
+Due April 30th - Before due, if you need any inputs, please book an appointment early with me during office hours. The team needs to meet in person by booking one of the office hours to demonstrate this on your computer. One can book the appointment in a team; all team members should be present during the demonstration. Input will be provided for any changes that are needed.
