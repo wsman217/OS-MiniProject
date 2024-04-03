@@ -6,7 +6,7 @@
 
 #include <stdlib.h>
 
-#include "schedule_fcfs.h"
+#include "scheduler.h"
 
 // sequence counter of next available thread identifier
 int nextTid = 0;
@@ -45,7 +45,15 @@ void schedule(Queue *queue) {
 
 /**
  * Returns the next task selected to run.
+ *
+ * @param Queue queue
+ * @param int scheduleAlgorithmSwitch - 0 for FCFS, 1 for SJF
  */
-Task *selectNextTask(Queue *queue) {
-    return popFirst(queue);
+Task *selectNextTask(Queue *queue, int scheduleAlgorithmSwitch) {
+    if (scheduleAlgorithmSwitch == 0) {
+        return popFirst(queue);
+    } else if (scheduleAlgorithmSwitch == 1) {
+        return popShortestFirst(queue);
+    }
+    return NULL;
 }

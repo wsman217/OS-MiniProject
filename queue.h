@@ -24,5 +24,6 @@ void enqueue(Queue *queue, Task *task);
 Task* delete(Queue *queue, struct node *node);
 Task* pop(Queue *queue);
 Task *popFirst(Queue *queue);
+Task *popShortestFirst(Queue *queue);
 int isEmpty(Queue *queue);
 void traverse(Queue *queue);

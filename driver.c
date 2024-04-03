@@ -14,7 +14,7 @@
 
 #define SIZE    100
 
-int main(int argc, char *argv[])//understand these argument usage and purpose
+int main(int argc, char *argv[])
 {
     Queue *queue = createQueue();
     FILE *in;
@@ -24,6 +24,11 @@ int main(int argc, char *argv[])//understand these argument usage and purpose
     char *name;
     int arrivalTime;
     int burst;
+
+    if (argc != 3) {
+        printf("Not enough arguments.");
+        return -1;
+    }
 
     in = fopen(argv[1], "r");
 
@@ -42,7 +47,7 @@ int main(int argc, char *argv[])//understand these argument usage and purpose
     fclose(in);
 
     // invoke the scheduler
-    schedule(queue);
+    schedule(queue, atoi(argv[2]));
 
     return 0;
 }

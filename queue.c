@@ -95,6 +95,23 @@ Task *popFirst(Queue *queue) {
     return delete(queue, lowestNode);
 }
 
+Task *popShortestFirst(Queue *queue) {
+    struct node *current = queue->head;
+
+    int shortestTime = current->task->burst;
+    struct node *lowestNode = current;
+    while (current) {
+        if (shortestTime > current->task->burst) {
+            shortestTime = current->task->burst;
+            lowestNode = current;
+        }
+
+        current = current->next;
+    }
+
+    return delete(queue, lowestNode);
+}
+
 void destroy(Queue *queue) {
     while (!isEmpty(queue)) {
         pop(queue);

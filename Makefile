@@ -1,7 +1,7 @@
 # makefile for scheduling program
 #
 
-# make fcfs - for FCFS scheduling
+# make build - for scheduling
 
 
 CC=gcc
@@ -13,12 +13,12 @@ clean:
 	
 
 
-fcfs: driver.o queue.o cpu.o schedule_fcfs.o
-	$(CC) $(CFLAGS) -o fcfs driver.o schedule_fcfs.o queue.o cpu.o
+build: driver.o queue.o cpu.o scheduler.o
+	$(CC) $(CFLAGS) -o scheduler driver.o schedule.o queue.o cpu.o
 
 
-schedule_fcfs.o: schedule_fcfs.c
-	$(CC) $(CFLAGS) -c schedule_fcfs.c
+scheduler.o: scheduler.c
+	$(CC) $(CFLAGS) -c scheduler.c
 
 driver.o: driver.c
 	$(CC) $(CFLAGS) -c driver.c
