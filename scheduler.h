@@ -5,4 +5,4 @@
 void add(Queue *queue, char *name, int arrivalTime, int burst);
 
 // invoke the scheduler
-void schedule(Queue *queue);
+void schedule(Queue *queue, int scheduleAlgorithmSwitch);

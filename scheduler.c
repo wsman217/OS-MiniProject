@@ -11,7 +11,7 @@
 // sequence counter of next available thread identifier
 int nextTid = 0;
 
-Task *selectNextTask(Queue *queue);
+Task *selectNextTask(Queue *queue, int scheduleAlgorithmSwitch);
 
 // add a new task to the list of tasks
 void add(Queue *queue, char *name, int arrivalTime, int burst) {
@@ -30,14 +30,14 @@ void add(Queue *queue, char *name, int arrivalTime, int burst) {
 /**
  * Run the FCFS scheduler
  */
-void schedule(Queue *queue) {
+void schedule(Queue *queue, int scheduleAlgorithmSwitch) {
     Task *current;
 
     // sanity checker
     traverse(queue);
 
     while (!isEmpty(queue)) {
-        current = selectNextTask(queue);
+        current = selectNextTask(queue, scheduleAlgorithmSwitch);
 
         run(current, current->burst);
     }

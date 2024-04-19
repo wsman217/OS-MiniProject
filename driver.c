@@ -14,8 +14,7 @@
 
 #define SIZE    100
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     Queue *queue = createQueue();
     FILE *in;
     char *temp;
@@ -26,11 +25,16 @@ int main(int argc, char *argv[])
     int burst;
 
     if (argc != 3) {
-        printf("Not enough arguments.");
+        printf("Not enough arguments.\n");
         return -1;
     }
 
     in = fopen(argv[1], "r");
+
+    if (in == NULL) {
+        printf("File was not found.\n");
+        return -1;
+    }
 
     while (fgets(task, SIZE, in) != NULL) {
         temp = strdup(task); //understand this built-in function

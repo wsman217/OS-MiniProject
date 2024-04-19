@@ -10,11 +10,12 @@ CFLAGS=-Wall
 clean:
 	rm -rf *.o
 	rm -rf fcfs
+	rm -rf *.out
 	
 
 
 build: driver.o queue.o cpu.o scheduler.o
-	$(CC) $(CFLAGS) -o scheduler driver.o schedule.o queue.o cpu.o
+	$(CC) $(CFLAGS) -o scheduler.out driver.o scheduler.o queue.o cpu.o
 
 
 scheduler.o: scheduler.c

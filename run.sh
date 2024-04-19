@@ -8,4 +8,4 @@ then
   algorithm=1
 fi
 
-./scheduler $1 $algorithm
+./scheduler.out "$1" "$algorithm"
